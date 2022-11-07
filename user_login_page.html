@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USER LOGIN</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css'>
+    </head>
+    <body>  
+            <div class="main">
+            <div class="pl">Login Page</div>
+        <form action="login.php" method="post">
+        <img class="img" src="images.jpeg" alt="profile">
+        <div class="v3">Log In Now</div>
+            <input class="email"type="email"placeholder="Enter email" name="email" required><i class="fas fa-user" required></i>
+            <i class="fa fa-lock"></i>
+            <input class="pass"type="password"placeholder="Enter password" name="pass" minlength="8" maxlength="100" required>
+            <br/>
+            <div class="bp"></div>
+            <div class="wrap">
+            <input class="button"type="submit" value="Log In">
+            </div>
+            <!--<input type="reset" class="reset">-->
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+         <script src="https://kit.fontawesome.com/552a632725.js" crossorigin="anonymous"></script>
+                 <script>
+document.querySelector('.button').onclick = function(){
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'bpn btn-danger'
+  },
+  buttonsStyling: false
+})
+swalWithBootstrapButtons.fire({
+  title: "<h style='color:black'>Congratulation</h>",
+  html:"<strong>Login Succesfully</strong>",
+  showCloseButton: true, 
+  color:'#716add',
+  icon: 'success',
+  background:'rgba(255,255,255)',
+  showCancelButton: true,
+  cancelButtonText: 'Cancel',
+  timer: 5000, 
+  timerProgressBar: true,
+  confirmButtonText: 'Continue',
+  reverseButtons: true
+}).then((result) => {
+ if (result.isConfirmed) { 
+ window.open("#"); } 
+ })}
+        </script>
+    </body>
+</html>
